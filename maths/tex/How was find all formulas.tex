@@ -73,8 +73,6 @@
 
                         \item It is respected the work of other persons that' s why anyone can remove anything that have been create by other person but it can be say that is wrong
 
-                        \item It is allowed for the creators of a paper to put things of his paper in the books of this project
-
                         \item The rules of the project or of the books can receive proposals to be change with a explication of why is better than the new rules writing a email to \url{lucasvarelacorrea@gmail.com}
                     \end{itemize}
 
@@ -151,11 +149,6 @@
 
         \section{Elementary Algebra}
             \subsection{Notable Identities}
-                Distributive property (id 2.6) (*)
-                    \[a(b + c) = \sum^a_{i=1} b + c\]
-                    \[= \sum^a_{i=1} b + \sum^a_{i=1} c\]
-                    \[= a \cdot b + a \cdot c\]
-    
                 Square of a summation or difference (id 2.7) (*)
                     \[(a + b)^2 = a + b \cdot a + b\]
                     \[= \sum^{a + b}_{i=1} a + b\]
@@ -185,6 +178,12 @@
                 \[\frac{x}{\frac{y}{z}} = \frac{x}{\frac{y}{z}} \cdot \frac{z}{z}\]
                 \[= \frac{x \cdot z}{\frac{y}{z} \cdot z}\]
                 \[= \frac{x \cdot z}{y}\]
+
+            \subsection{Property of multiplications}
+                Distributive property (id 2.6) (*)
+                    \[a(b + c) = \sum^a_{i=1} b + c\]
+                    \[= \sum^a_{i=1} b + \sum^a_{i=1} c\]
+                    \[= a \cdot b + a \cdot c\]
     
     \chapter{Mathematical analysis}                    
         \section{Calculus}
@@ -268,7 +267,6 @@
                     \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \frac{\binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h}\]
                     \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \binom{n}{k} f^{n - k}(x + h) \cdot h^{k - 1}\]
                     \[= \sum^n_{k=1} \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k} (x + h) \cdot h^{k - 1}\]
-                    \[= \lim_{h\rightarrow 0} \left[ \binom{n}{1} f^{n - 1} (x + h) h^{1 - 1} + \binom{n}{2} f^{n - 2} (x + h) h^{2 - 1} + \cdots + \binom{n}{k} f^{n - k}(x + h) h^{k - 1} \right]\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1}\]
                     \[= n \cdot f^{n - 1}(x)\]
 
@@ -278,7 +276,7 @@
                     \[= g^{-1}(x) \frac{d}{dx} f(x) - f(x) \cdot g^{-2}(x) \cdot \frac{d}{dx}g(x)\]
                     \[= \frac{g(x) \frac{d}{dx} f(x) - f(x) \cdot \frac{d}{dx} g(x)}{g^2(x)}\]
 
-                    Derivative of a natural logarithm (id 3.17) (*)
+                    Derivative of a natural logarithm (id 3.17) (?)
                     \[\frac{d}{dx} \ln(x) = \lim_{h \rightarrow 0} \frac{\ln(x + h) -\ln(x)}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{\ln\left(\frac{x + h}{x} \right)}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{\ln \left(1 + \frac{h}{x} \right)}{h}\]
@@ -287,31 +285,54 @@
                     \[= \lim_{u \rightarrow 0} \frac{1}{x} \frac{\ln(1 + u)}{u}\]
                     \[= \lim_{u \rightarrow 0} \ln(1 + u) \cdot \lim_{u \rightarrow 0} \frac{1}{u \cdot x}\]
                     \[= \ln(1) \cdot \lim_{u  \rightarrow 0} \frac{1}{u \cdot x}\]
+                    \[= \lim_{u \rightarrow 0} \frac{u}{u \cdot x}\]
                     \[= \frac{1}{x}\]
 
+                \subsubsection{Relation with other functions}
+                    Relation with $e^x$ (id 3.18) (?)
+                    \[\frac{d}{dx}[e^x] = \lim_{h \rightarrow 0} \frac{e^{x + h} - e^x}{h}\]
+                    \[= \lim_{h \rightarrow 0} \frac{e^x \cdot e^h - e^x}{h}\]
+                    \[= \lim_{h \rightarrow 0} \frac{e^x (e^h - 1)}{h}\]
+                    \[= \frac{e^x(1 - 1)}{\lim_{h \rightarrow 0} h}\]
+                    \[= e^x \frac{1 - 1}{\lim_{h \rightarrow 0} h}\]
+                    \[= e^x \lim_{h \rightarrow 0} \frac{h}{h}\]
+                    \[= e^x\]
+
+                    Relation with $\int$ (id 3.19) (*)
+                    \[\frac{d}{dx} \left[\int^b_a dx f(x) \right] = \lim_{h \rightarrow 0} \frac{1}{h} \left(\int^b_a dx f(x + h) - \int^b_a dx f(x) \right)\]
+                    \[= \lim_{h \rightarrow 0} \frac{1}{h} \int^b_a dx f(x + h) - f(x)\]
+                    \[= \lim_{h \rightarrow 0} \int^b_a dx \frac{f(x + h) - f(x)}{h}\]
+                    \[= \int^b_a dx \frac{d}{dx} f(x)\]
+
+                    Relation with $\sum$ (id 3.20) (*)
+                    \[\frac{d}{dx} \left[\sum^n_{i=j} f(i, x) \right] = \frac{d}{dx} [f(j, x) + f(j + 1, x) + \cdots + f(n - 1, x) + f(n, x)]\]
+                    \[= \frac{d}{dx} f(j, x) + \frac{d}{dx} f(j + 1, x) + \cdots + \frac{d}{dx} f(n - 1, x) + \frac{d}{dx} f(n, x)\]
+                    \[= \sum^n_{i=j} \frac{d}{dx} f(i, x)\]
+                
                 \subsubsection{Definition functions or numbers}
-                    Function digamma (id 3.17) (?)
+                    Function digamma (id 3.21) (?)
                     \[\psi(x) = \frac{d}{dx} \ln[\Gamma(x)] = \frac{\frac{d}{dx} \Gamma(x)}{\Gamma(x)}\]
 
             \subsection{Integrals}
                 \subsubsection{Constants}
-                    Integral of the multiply of a function and a constant (id 3.17) (*)
+                    Integral of the multiply of a function and a constant (id 3.22) (*)
                     \[\int^b_a C \cdot f(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C \cdot f\left(a + i \frac{b - a}{n}\right)\]
-                    
-                    \[= C \cdot \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} f \left(a + i\frac{b - a}{n}\right) \]
-                    
-                    \[= C \cdot \int^b_a f(x) dx\]
+                    \[= C \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} f \left(a + i\frac{b - a}{n}\right) \]
+                    \[= C \int^b_a f(x) dx\]
+
+                    Integral of a constant (id 3.22) (*)
+                    \[\int^b_a dx \cdot C = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \cdot C \cdot n\]
+                    \[= C(b - a)\]
 
                 \subsubsection{Arithmetic Operations}
-                    Integral of a addition and a subtraction of two functions (id 3.18) (*)
+                    Integral of a addition and a subtraction of two functions (id 3.23) (*)
                     \[\int^b_a f(x) \pm g(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[ \sum^n_{i=1} f\left(a + i \frac{b - a}{n}\right) \pm g\left(a + i \frac{b - a}{n} \right) \right]\]
-
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right]\]
-
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right)\]
-
                     \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx\]
                 
+
 
         \chapter{Final part}
             \section{Reference}
