@@ -118,6 +118,12 @@
 
         \section{Error Zone}
 
+    Note: it has been create a new version of this book. In the index you can just click and will move you to the part you want and the properties use in the equations you will see the id of the property you click it and will move you to the demonstration of the formula use.
+
+    Link to that version: \url{https://github.com/White-Mask-230/A-free-owl}
+
+    The two versions will have the same content and the two will be modified at the same time.
+
     \chapter{Algebra}
         \section{Linear algebra}
             \subsection{Summation}
@@ -149,7 +155,7 @@
 
         \section{Elementary Algebra}
             \subsection{Notable Identities}
-                Square of a summation or difference (id 2.7) (*)
+                Square of a summation or difference (id 2.6) (*)
                     \[(a + b)^2 = a + b \cdot a + b\]
                     \[= \sum^{a + b}_{i=1} a + b\]
                     \[= \sum^{a + b}_{i=1} a + \sum^{a + b}_{i=1} b\]
@@ -157,7 +163,7 @@
                     \[= a^2 + a \cdot b + a \cdot b + b^2\]
                     \[= a^2 + 2 \cdot a \cdot b + b^2\]
     
-                Sum by difference (id 2.8) (*)
+                Sum by difference (id 2.7) (*)
                     \[a + b \cdot a - b = \sum^{a + b}_{i=1} a - b\]
                     \[= \sum^{a + b}_{i=1} a - \sum^{a + b}_{i=1} b\]
                     \[= a(a + b) - b(a + b)\]
@@ -165,7 +171,7 @@
                     \[= a^2 - b^2\]
 
             \subsection{Property of Fractions}
-                Reciprocal of the fraction in the denominator (id 2.9) (*)
+                Reciprocal of the fraction in the denominator (id 2.8) (*)
 
                 Credits to:
                 \begin{itemize}
@@ -180,7 +186,7 @@
                 \[= \frac{x \cdot z}{y}\]
 
             \subsection{Property of multiplications}
-                Distributive property (id 2.6) (*)
+                Distributive property (id 2.9) (*)
                     \[a(b + c) = \sum^a_{i=1} b + c\]
                     \[= \sum^a_{i=1} b + \sum^a_{i=1} c\]
                     \[= a \cdot b + a \cdot c\]
@@ -226,22 +232,22 @@
         
             \subsection{Derivative}
                 \subsubsection{With Constants}
-                    Derivative of constant multiply and function (id 3.11) (*)
+                    Derivative of constant multiply and function (id 3.11) (+)
                     \[\frac{d}{dx} [C f(x)] = \lim_{h \rightarrow 0} \frac{C \cdot f(x + h) - C \cdot f(x)}{h}\]
                     \[= C \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h}\]
                     \[= C \frac{d}{dx} f(x)\]
 
-                    Derivative of a constant (id 3.12) (*)
+                    Derivative of a constant (id 3.12) (+)
                     \[\frac{d}{dx} [C] = \lim_{h \rightarrow 0} \frac{C - C}{h}\]
                     \[= 0\]
 
                 \subsubsection{Arithmetic Operations}
-                    Derivative of the addition or subtraction of two functions (id 3.13) (*)
+                    Derivative of the addition or subtraction of two functions (id 3.13) (+)
                     \[\frac{d}{dx} [f(x) \pm g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \pm g(x + h) - f(x) -g(x)}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \pm \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h}\]
                     \[= \frac{d}{dx} f(x) \pm \frac{d}{dx} g(x)\]
     
-                    Derivative of a multiply of two functions (id 3.14) (*)
+                    Derivative of a multiply of two functions (id 3.14) (+)
                     \[\frac{d}{dx} [f(x) \cdot g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x)}{h}\]
 
                     Note: addition and subtraction of $f(x) \cdot g(x + h)$
@@ -270,7 +276,7 @@
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1}\]
                     \[= n \cdot f^{n - 1}(x)\]
 
-                    Derivative of a division of two functions (id 3.16) (*)
+                    Derivative of a division of two functions (id 3.16) (+)
                     \[\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{d}{dx} [f(x) \cdot g^{-1}(x)]\]
                     \[= g^{-1}(x) \cdot \frac{d}{dx}f(x) + f(x) \cdot \frac{d}{dx} g^{-1}(x)\]
                     \[= g^{-1}(x) \frac{d}{dx} f(x) - f(x) \cdot g^{-2}(x) \cdot \frac{d}{dx}g(x)\]
@@ -289,7 +295,7 @@
                     \[= \frac{1}{x}\]
 
                 \subsubsection{Relation with other functions}
-                    Relation with $e^x$ (id 3.18) (?)
+                    Relation with $e^x$ (id 3.18) (*)
                     \[\frac{d}{dx}[e^x] = \lim_{h \rightarrow 0} \frac{e^{x + h} - e^x}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{e^x \cdot e^h - e^x}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{e^x (e^h - 1)}{h}\]
@@ -331,8 +337,6 @@
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right]\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right)\]
                     \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx\]
-                
-
 
         \chapter{Final part}
             \section{Reference}
