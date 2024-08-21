@@ -1,6 +1,8 @@
 Title: How was find all formulas of mathemathics
 
 # Index
+https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How was find all formulas.md#1-introduction
+
 
 # 1. Introduction
 ## 1.1. Goal of the book
