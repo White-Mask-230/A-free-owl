@@ -1,8 +1,41 @@
 Title: How was find all formulas of mathemathics
 
 # Index
-https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How was find all formulas.md#1-introduction
+[1. Introduction](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#1-introduction)
 
+[1.1. Goal of the book](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#11-goal-of-the-book)
+
+[1.2. Problems solve](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#12-problems-solve)
+
+[1.3. Book nomenclature](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#13-book-nomenclature)
+
+[2. Algebra](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#2-algebra)
+
+[2.1. Linear algebra](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
+
+[2.1.1. Summation](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#211-summation)
+
+[2.2. Elementary Algebra](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#22-elementary-algebra)
+
+[2.2.1. Notable Identities](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#221-notable-identities)
+
+[2.2.2. Property of Fractions](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#222-property-of-fractions)
+
+[2.2.3. Property of multiplications](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#223-property-of-multiplications)
+
+[3. Mathematical analysis](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#3-mathematical-analysis)
+
+[3.1. Calculus](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#31-calculus)
+
+[3.1.1. Limits](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#311-limits)
+
+[3.1.2. Derivative](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#312-derivative)
+
+[3.1.3. Integrals](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#313-integrals)
+
+[4. Reference](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#4-reference)
+
+[5. Make by](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#5-make-by)
 
 # 1. Introduction
 ## 1.1. Goal of the book
@@ -40,20 +73,20 @@ $\sum^n_{i=j} f(i) = f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)$
 #### Change limits
 ##### Index shift (id 2.2) (*)
 
-$\sum^{n - 1}_{i=j - 1} f(i + 1) = f(j - 1 + 1) + f(j - 1 + 2) + \cdots + f(n - 2 + 1) + f(n - 1 + 1)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$\sum^{n - 1}_{i=j - 1} f(i + 1) = f(j - 1 + 1) + f(j - 1 + 2) + \cdots + f(n - 2 + 1) + f(n - 1 + 1)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 $= f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)$ 
 
-$= \sum^n_{i=j} f(i)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$= \sum^n_{i=j} f(i)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 #### Arithmetic Operations
 ##### Summation of the addition or subtraction of two function (id 2.3) (*)
 
-$\sum^n_{i=j} f(i) + g(i) = f(j) + g(j) + f(j + 1) + g(j + 1) + \cdots + f(n - 1) + g(n - 1) + f(n) + g(n)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$\sum^n_{i=j} f(i) + g(i) = f(j) + g(j) + f(j + 1) + g(j + 1) + \cdots + f(n - 1) + g(n - 1) + f(n) + g(n)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 $= f(j) + f(j + 1) + \cdots + f(n - 1) + f(n) + g(j) + g(j + 1) + \cdots + g(n - 1) + g(n)$
 
-$= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 #### With Constants
 
@@ -61,17 +94,17 @@ $= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i)$ [[2.1.]](https://github.com/White-Mask
 
 Note $C_1 = C_2 = \cdots = C_{n - 1} = C_n$
 
-$\sum^n_{i=1} C = C_1 + C_2 + \cdots + C_{n - 1} + C_n$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$\sum^n_{i=1} C = C_1 + C_2 + \cdots + C_{n - 1} + C_n$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 $= C \cdot n$
 
 ##### Summation of a constant and a multiplication (id 2.5) (*)
 
-$\sum^n_{i=j} C \cdot f(i) = C \cdot f(j) + C \cdot f(j + 1) + \cdots + C \cdot f(n - 1) + C \cdot f(n)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$\sum^n_{i=j} C \cdot f(i) = C \cdot f(j) + C \cdot f(j + 1) + \cdots + C \cdot f(n - 1) + C \cdot f(n)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
-$= C [f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)]$ [[2.10.]]() TODO poner link
+$= C [f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)]$ [id 2.9.]() TODO poner link
                     
-$= C \sum^n_{i=j} f(i)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#definition-summation-id-21-)
+$= C \sum^n_{i=j} f(i)$ [id 2.1](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#21-linear-algebra)
 
 ## 2.2. Elementary Algebra
 ### 2.2.1. Notable Identities
@@ -79,25 +112,25 @@ $= C \sum^n_{i=j} f(i)$ [[2.1.]](https://github.com/White-Mask-230/A-free-owl/ne
 
 $(a + b)^2 = a + b \cdot a + b$
 
-$= \sum^{a + b}_{i=1} a + b$ [[2.4.]](https://github.com/White-Mask-230/A-free-owl/new/main/maths#summation-of-the-addition-or-subtraction-of-two-function-id-24-)
+$= \sum^{a + b}_{i=1} a + b$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
-$\sum_{i=1}^{a + b} a + \sum_{i=1}^{a + b} b$
+$\sum_{i=1}^{a + b} a + \sum_{i=1}^{a + b} b$ [id 2.3](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-the-addition-or-subtraction-of-two-function-id-23-)
 
-$= a(a + b) \pm b(a + b)$
+$= a(a + b) \pm b(a + b)$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
-$= a^2 + a \cdot b + a \cdot b + b^2$
+$= a^2 + a \cdot b + a \cdot b + b^2$ [id 2.9]() TODO poner link
 
 $= a^2 + 2 \cdot a \cdot b + b^2$
 
 ##### Sum by difference (id 2.7) (*)
 
-$a + b \cdot a - b = \sum^{a + b}_{i=1} a - b$
+$a + b \cdot a - b = \sum^{a + b}_{i=1} a - b$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
-$= \sum_{i=1}^{a + b} a - \sum_{i=1}^{a + b} b$
+$= \sum_{i=1}^{a + b} a - \sum_{i=1}^{a + b} b$ [id 2.3](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-the-addition-or-subtraction-of-two-function-id-23-)
 
-$= a(a + b) - b(a + b)$
+$= a(a + b) - b(a + b)$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
-$= a^2 + b \cdot a - b \cdot a - b^2$
+$= a^2 + b \cdot a - b \cdot a - b^2$ [id 2.9]() TODO poner 
 
 $= a^2 - b^2$
 
@@ -111,13 +144,13 @@ $= \frac{x \cdot z}{\frac{y}{z} \cdot z}$
 $= \frac{x \cdot z}{y}$
 
 ### 2.2.3. Property of multiplications
-Distributive property (id 2.9) (*)
+##### Distributive property (id 2.9) (*)
                     
-$a(b + c) = \sum^a_{i=1} b + c$
+$a(b + c) = \sum^a_{i=1} b + c$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
-$= \sum^a_{i=1} b + \sum^a_{i=1} c$
+$= \sum^a_{i=1} b + \sum^a_{i=1} c$ [id 2.3](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#arithmetic-operations)
 
-$= a \cdot b + a \cdot c$
+$= a \cdot b + a \cdot c$ [id 2.4](https://github.com/White-Mask-230/A-free-owl/blob/main/maths/How_was_find_all_formulas.md#summation-of-a-constant-id-24-)
 
 # 3. Mathematical analysis
 ## 3.1. Calculus
