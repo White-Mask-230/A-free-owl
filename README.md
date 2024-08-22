@@ -12,5 +12,8 @@ Developing
 * [Receive help](https://github.com/White-Mask-230/A-free-owl/wiki/Receive-help)
 * [Collaborate](https://github.com/White-Mask-230/A-free-owl/wiki/Collaborate)
 
+# Official copies
+* [In figshare](https://figshare.com/articles/journal_contribution/How_was_find_all_formulas_of_maths/26339590?file=48713029)
+
 # Make by
 * [White-Mask-230(Lucas Varela Correa)](https://github.com/White-Mask-230)
