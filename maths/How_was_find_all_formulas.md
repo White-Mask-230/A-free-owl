@@ -39,18 +39,21 @@ Title: How was find all formulas of mathemathics
 
 # 1. Introduction
 ## 1.1. Goal of the book
-This book have the goal to collect how was find all the formulas of maths.
+The goal of this book is to compile how all the mathematical formulas have
+been discovered.
 
 ## 1.2. Problems solve
-* Avoid the mathematics become a dogma, for that is proof all the formulas
-instead of just thinking that they are correct
+* To avoid the mathematics becoming a dogma, for that this book proves
+and display how all the formulas where discovered, instead of just thinking
+that they are correct.
 
-* There is a lot of information relate to the mathematics in website, journals
-and books. This make difficult to the people that want to learn all the
-actual maths, to make it more easy is was make this book which will
-contain all the original information that have this sources.
+* There is a lot of information relate to the mathematics scattered in differ-
+ent websites, journals and books. This make difficult to the people that
+want to learn by themselves all the mathematical formulas. To make it
+more easy, we are preparing this book which will contain all the original
+information that have this sources.
 
-* Verification of information different of the classical peer review
+* Verification of information different of the classical peer review.
 
 ## 1.3. Book nomenclature
 
@@ -63,6 +66,9 @@ In all equations you will see in any step a link of the property use in that ste
 * The formula was wrote more than a month: (+)
 * The formula is cited in a issue: (-)
 * Use a formula that is not demonstrated: (?)
+
+## 1.4 Readme of the project
+[here](https://github.com/White-Mask-230/A-free-owl/blob/main/README.md)
 
 # 2. Algebra
 ## 2.1. Linear algebra
@@ -135,13 +141,35 @@ $= a^2 + b \cdot a - b \cdot a - b^2$ [id 2.9](https://github.com/White-Mask-230
 $= a^2 - b^2$
 
 ### 2.2.2. Property of Fractions
-##### Reciprocal of the fraction in the denominator (id 2.8) (*) [Credits](https://es.quora.com/Cuál-es-la-demostración-de-que-frac-y-frac-z-x-frac-yx-z/answer/Diego-Cabrales)
+##### Addition of two fractions (id 2.10) (*)
+$\frac{a}{b} + \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \frac{c \cdot b}{b \cdot d}$
 
-$\frac{x}{\frac{y}{z}} = \frac{x}{\frac{y}{z}} \cdot \frac{z}{z}$
+$= \frac{a \cdot d + c \cdot b}{b \cdot d}$
 
-$= \frac{x \cdot z}{\frac{y}{z} \cdot z}$
+##### Multiplication of two fractions (id 2.11) (*)
+$\frac{a}{b} \cdot \frac{c}{d} = \frac{a}{b} \cdot \frac{c}{d} \cdot b \cdot d / b \cdot d$
 
-$= \frac{x \cdot z}{y}$
+$= a \cdot c / b \cdot d$
+
+$= \frac{a \cdot c}{b \cdot d}$
+
+##### Fraction of a fraction (id 2.12) (*)
+$\frac{a}{\frac{b}{\frac{c}{d}}} = \frac{a \cdot d}{\frac{b \cdot c}{\frac{c \cdot d}{d \cdot c}}}$
+
+$= \frac{a \cdot d}{b \cdot c}$
+
+##### Multiplication and division of the same number (id 2.14) (*)
+$a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a}$
+
+$= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a}$
+
+$= \frac{2}{a} + \sum^{a - 2}_{i=1} \frac{1}{a}$
+
+$\vdots$
+
+$= \frac{a}{a}$
+
+$= 1$
 
 ### 2.2.3. Property of multiplications
 ##### Distributive property (id 2.9) (*)
