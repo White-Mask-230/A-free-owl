@@ -128,7 +128,7 @@
     \chapter{Algebra}
         \section{Linear algebra}
             \subsection{Summation}
-                Definition summation (id 2.1) (*)
+                Definition summation (id 2.1) (+)
                 \[\sum^n_{i=j} f(i) = f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)\]
             
                 \subsubsection{Change limits}
@@ -145,21 +145,21 @@
 
                     Subtraction inferior limit add elements (id 2.4) (*)
                     \[\sum^n_{i=j}f(i) = f(j) + f(j + 1) + f(j + 2) + \cdots + f(n - 1) + f(n)\]
-                    \[= f(j) + \sum^{n}_{i=j+1}\]
+                    \[= f(j) + \sum^{n}_{i=j+1} f(i)\]
 
                 \subsubsection{Arithmetic Operations}
-                    Summation of the addition or subtraction of two function (id 2.5) (*)
+                    Summation of the addition or subtraction of two function (id 2.5) (+)
                     \[\sum^n_{i=j} f(i) + g(i) = f(j) + g(j) + f(j + 1) + g(j + 1) + \cdots + f(n - 1) + g(n - 1) + f(n) + g(n)\]
                     \[= f(j) + f(j + 1) + \cdots + f(n - 1) + f(n) + g(j) + g(j + 1) + \cdots + g(n - 1) + g(n)\]
                     \[= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i)\]
 
                 \subsubsection{With Constants}
-                    Summation of a constant (id 2.6) (*) \\
+                    Summation of a constant (id 2.6) (+) \\
                     
                     Note $C_1 = C_2 = \cdots = C_{n - 1} = C_n$
                     \[\sum^n_{i=1} C = C_1 + C_2 + \cdots + C_{n - 1} + C_n = C \cdot n\]
 
-                    Summation of a constant and a multiplication (id 2.7) (*)
+                    Summation of a constant and a multiplication (id 2.7) (+)
                     \[\sum^n_{i=j} C \cdot f(i) = C \cdot f(j) + C \cdot f(j + 1) + \cdots + C \cdot f(n - 1) + C \cdot f(n)\]
                     \[= C [f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)]\]
                     \[= C \sum^n_{i=j} f(i)\]
@@ -356,6 +356,20 @@
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right]\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right)\]
                     \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx\]
+
+                    Integral of a function elevate to 1 (id 3.25) (?)
+                    \[\int^b_a dx \cdot x = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} a + i \frac{b - a}{n}\]
+                    \[= \lim_{n \rightarrow \infty} \left[\sum^n_{i=1} a + \sum^n_{i=1} i \frac{b - a}{n}\right]\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b - a}{n} \sum^n_{i=1} i \right]\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b - a}{n} \cdot n \cdot \frac{n + 1}{2}\right]\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{(b - a)(n + 1)}{2}\right]\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b \cdot n + b - a \cdot n + a}{2}\right]\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{n (b - a) + b + a}{2}\right]\]
+                    \[= a(b - a) + \frac{(b - a)^2}{2} + \lim_{n \rightarrow \infty} \frac{b + a}{2 n}\]
+                    \[= a(b - a) + \frac{(b - a)^2}{2}\]
+                    \[= \frac{2a(b - a) + (b - a)^2}{2}\]
+                    \[= \frac{2 \cdot a \cdot b - 2a^2 + b^2 - 2 \cdot b \cdot a + a^2}{2}\]
+                    \[= \frac{b^2 - a^2}{2}\]
 
         \chapter{Final part}
             \section{Reference}
