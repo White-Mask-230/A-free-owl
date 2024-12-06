@@ -2,9 +2,6 @@
 Find out about all the changes in this project [X official account](https://x.com/LucasVarelaCor1)
 
 # A-free-owl project
-## Logo
-<img src="https://github.com/White-Mask-230/A-free-owl/blob/main/md_photos/logo.jpg" alt="Logo" width="300">
-
 ## Goal
 Condense all the world's information into one place
 
