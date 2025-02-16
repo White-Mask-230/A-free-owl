@@ -21,6 +21,17 @@ Developing
 
 * The rules of the project or of the books can receive proposals to be change with a explication of why is better than the new rules writing a email to lucasvarelacorrea@gmail.com
 
+# TODO Zone
+## How Was Find All Formulas of Maths
+Prove the formulas of the photos
+![Derivatives](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/derivatives.jpg)
+![Especific integral](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/especific-int.jpg)
+![General Integrals](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/general-integrals.jpg)
+![Limits Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/limits-propertys.jpg)
+![Logarithm Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/logarithm-propertys.jpg)
+![Propertys Infinity](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/propertys-infinity.jpg)
+![Trigonometric Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/trigonmetric-propertys.jpg)
+
 # Wiki
 * [Receive help](https://github.com/White-Mask-230/A-free-owl/wiki/Receive-help)
 * [Collaborate](https://github.com/White-Mask-230/A-free-owl/wiki/Collaborate)
