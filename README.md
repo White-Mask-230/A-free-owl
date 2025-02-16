@@ -15,8 +15,6 @@ Developing
 
 * This books can be use as primary source.
 
-* This books can be use as primary source.
-
 * This project focus in demonstrated the information, not only to store it.
 
 * This project respects the work of all people, so while it is allowed to include changes, you must demonstrate why the information was wrong.
