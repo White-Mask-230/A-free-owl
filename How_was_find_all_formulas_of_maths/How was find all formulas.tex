@@ -1,16 +1,77 @@
 \documentclass{book}
+\setlength{\parindent}{0pt}
 
+% Import librarys
 \usepackage{xcolor}
 \usepackage{pagecolor}
 \usepackage{tikz}
-\usepackage{graphicx}
-\usepackage[absolute,overlay]{textpos}
 \usepackage{hyperref}
-\setlength{\parindent}{0pt}
-\usepackage{nopageno}
 \usepackage{amsmath}
 
+% Create variable
+\newcounter{counter}
+
+\newcounter{counter2}
+\setcounter{counter2}{1}
+
+\newcounter{counter3}
+\setcounter{counter3}{1}
+
+% Create command
+\newcommand{\NewId}[2]{
+    \ifnum#2=2
+        \setcounter{counter}{\value{counter2}}
+        \stepcounter{counter2}
+    \fi
+    \ifnum#2=3
+        \setcounter{counter}{\value{counter3}}
+        \stepcounter{counter3}
+    \fi
+    \expandafter\edef\csname #1\endcsname{#2.\arabic{counter}}
+}
+
+\NewId{DefinitionSummation}{2}
+\NewId{IndexShift}{2}
+\NewId{SubtractionSuperiorLimit}{2}
+\NewId{SubtractionInferiorLimit}{2}
+\NewId{SummationAdditionFunctions}{2}
+\NewId{SummationConstant}{2}
+\NewId{SummationConstantMultiplication}{2}
+\NewId{DefinitionProduct}{2}
+\NewId{ProductConstant}{2}
+\NewId{ProductFunctionConstant}{2}
+\NewId{ProductFunctions}{2}
+\NewId{DefinitionFactorial}{2}
+\NewId{SquareSummationDifference}{2}
+\NewId{SumDifference}{2}
+\NewId{AdditionTwoFractions}{2}
+\NewId{FractionOfFraction}{2}
+\NewId{SummationTwoFractionsSame}{2}
+\NewId{DefinitionMultiplication}{2}
+\NewId{DistributiveProperty}{2}
+\NewId{MultiplicationDivisionSame}{2}
+\NewId{RaisedToDefinition}{2}
+\NewId{ValueXRaisedToZero}{2}
+\NewId{ValueXRaisedPlus}{2}
+
+\NewId{LimitConstant}{3}
+\NewId{LimitToHim}{3}
+\NewId{LimitConstantFuntion}{3}
+\NewId{LimitSummationFunctions}{3}
+\NewId{LimitFunctionsMultiply}{3}
+\NewId{LimitDivideFunctions}{3}
+\NewId{LimitCompositeFunction}{3}
+\NewId{SqueezeTheorem}{3}
+\NewId{LimitDefinitionDerivative}{3}
+\NewId{DefinitionIntegral}{3}
+\NewId{RelationSummationLimit}{3}
+\NewId{DerivativeConstantMultiply}{3}
+\NewId{DerivativeConstant}{3}
+\NewId{DerivativeAdditionFunction}{3}
+\NewId{DerivativeMultiplyFunctions}{3}
+
 \begin{document}
+    % Create front page
     \definecolor{gold}{rgb}{1.0, 0.84, 0.0}
     \pagestyle{empty}
 
@@ -25,11 +86,13 @@
     \newpage
         \pagecolor{white}
 
+    % Create index
         \tableofcontents
 
         Note: This book is in developing\\
         Note: It is recommended to download the file
 
+    % Content
     \chapter{Initial part}
         \section{Introduction}
             \subsection{A free owl project}
@@ -102,162 +165,207 @@
             \begin{itemize}
                 \item It will use twitter to make you know the latest modifications of this project. Link: \url{https://x.com/LucasVarelaCor1}
             
-            \end{itemize}
-                
+            \end{itemize}      
 
     \chapter{Algebra}
         \section{Linear algebra}
             \subsection{Summation}
-                Definition summation (id 2.1) (+)
-                \[\sum^n_{i=j} f(i) = f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)\]
+                Definition summation (id \DefinitionSummation) (+)
+                \[\sum^n_{i=j} f(i) = f(j) + f(j + 1) + \cdots + f(n - 1) + f(n) \hspace{1cm} (\DefinitionSummation)\]
             
                 \subsubsection{Change limits}
-                    Index shift (id 2.2) (+)
-                    \[\sum^{n - 1}_{i=j - 1} f(i + 1) = f(j - 1 + 1) + f(j - 1 + 2) + \cdots + f(n - 2 + 1) + f(n - 1 + 1) \hspace{1cm} (2.1)\]
+                    Index shift (id \IndexShift) (+)
+                    \[\sum^{n - 1}_{i=j - 1} f(i + 1) = f(j - 1 + 1) + f(j - 1 + 2) + \cdots + f(n - 2 + 1) + f(n - 1 + 1) \hspace{1cm} (\DefinitionSummation)\]
                     \[= f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)\]
-                    \[= \sum^n_{i=j} f(i) \hspace{1cm} (2.1)\]
+                    \[= \sum^n_{i=j} f(i) \hspace{1cm} (\DefinitionSummation)\]
+                                        
+                    Subtraction superior limit (id \SubtractionSuperiorLimit) (+)
+                    \[\sum^n_{i=j}f(i) = f(j) + f(j + 1) + \cdots + f(n - 2) + f(n - 1) + f(n) \hspace{1cm} (\DefinitionSummation)\]
+                    \[= f(n) + \sum^{n - 1}_{i=j}f(i) \hspace{1cm} (\DefinitionSummation)\]
 
-                    Note: It can be done the same but multiplication and division\\
-
-                    Subtraction superior limit (id 2.3) (+)
-                    \[\sum^n_{i=j}f(i) = f(j) + f(j + 1) + \cdots + f(n - 2) + f(n - 1) + f(n) \hspace{1cm} (2.1)\]
-                    \[= f(n) + \sum^{n - 1}_{i=j}f(i) \hspace{1cm} (2.1)\]
-
-                    Subtraction inferior limit (id 2.4) (+)
-                    \[\sum^n_{i=j}f(i) = f(j) + f(j + 1) + f(j + 2) + \cdots + f(n - 1) + f(n) \hspace{1cm} (2.1)\]
-                    \[= f(j) + \sum^{n}_{i=j+1} f(i) \hspace{1cm} (2.1)\]
+                    Subtraction inferior limit (id \SubtractionInferiorLimit) (+)
+                    \[\sum^n_{i=j}f(i) = f(j) + f(j + 1) + f(j + 2) + \cdots + f(n - 1) + f(n) \hspace{1cm} (\DefinitionSummation)\]
+                    \[= f(j) + \sum^{n}_{i=j+1} f(i) \hspace{1cm} (\DefinitionSummation)\]
 
                 \subsubsection{Arithmetic Operations}
-                    Summation of the addition or subtraction of two function (id 2.5) (+)
-                    \[\sum^n_{i=j} f(i) + g(i) = f(j) + g(j) + f(j + 1) + g(j + 1) + \cdots + f(n - 1) + g(n - 1) + f(n) + g(n) \hspace{1cm} (2.1)\]
+                    Summation of the addition of two functions (id \SummationAdditionFunctions) (+)
+                    \[\sum^n_{i=j} f(i) + g(i) = f(j) + g(j) + f(j + 1) + g(j + 1) + \cdots + f(n - 1) + g(n - 1) + f(n) + g(n) \hspace{1cm} (\DefinitionSummation)\]
                     \[= f(j) + f(j + 1) + \cdots + f(n - 1) + f(n) + g(j) + g(j + 1) + \cdots + g(n - 1) + g(n)\]
-                    \[= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i) \hspace{1cm} (2.1)\]
+                    \[= \sum^n_{i=j} f(i) + \sum^n_{i=j} g(i) \hspace{1cm} (\DefinitionSummation)\]
 
                 \subsubsection{With Constants}
-                    Summation of a constant (id 2.6) (+) \\
+                    Summation of a constant (id \SummationConstant) (+) \\
                     
                     Note $C_1 = C_2 = \cdots = C_{n - 1} = C_n$
-                    \[\sum^n_{i=1} C = C_1 + C_2 + \cdots + C_{n - 1} + C_n \hspace{1cm} (2.1)\]
+                    \[\sum^n_{i=1} C = C_1 + C_2 + \cdots + C_{n - 1} + C_n \hspace{1cm} (\DefinitionSummation)\]
                     \[= C \cdot n\]
 
-                    Summation of a constant and a multiplication (id 2.7) (+)
-                    \[\sum^n_{i=j} C \cdot f(i) = C \cdot f(j) + C \cdot f(j + 1) + \cdots + C \cdot f(n - 1) + C \cdot f(n) \hspace{1cm} (2.1)\]
-                    \[= C [f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)] \hspace{1cm} (2.6)\]
-                    \[= C \sum^n_{i=j} f(i) \hspace{1cm} (2.1)\]
+                    Summation of a constant and multiplication (id \SummationConstantMultiplication) (+)
+                    \[\sum^n_{i=j} C \cdot f(i) = C \cdot f(j) + C \cdot f(j + 1) + \cdots + C \cdot f(n - 1) + C \cdot f(n) \hspace{1cm} (\DefinitionSummation)\]
+                    \[= C [f(j) + f(j + 1) + \cdots + f(n - 1) + f(n)] \hspace{1cm} (\DistributiveProperty)\]
+                    \[= C \sum^n_{i=j} f(i) \hspace{1cm} (\DefinitionSummation)\]
+
+            \subsection{Product}
+                Definition Product (id \DefinitionProduct) (*)
+                \[ \Pi^{n}_{i=m} x_i = x_m \cdot x_{m + 1} \cdots x_{n - 1} \cdot x_n\]
+
+                \subsubsection{With Constants}
+                    Product of a constant (id \ProductConstant) (*)
+                    \[\Pi^n_{i=m} C = C \cdot C \cdots C \cdot C \hspace{1cm} (\DefinitionProduct)\]
+                    \[C^n\]
+
+                    Product of a function and a constant (id \ProductFunctionConstant) (*)
+                    \[\Pi^n_{i=m} C f(i) = \Pi^n_{i=m} C \Pi^n_{i=m} f(i) \hspace{1cm} (\ProductFunctionConstant)\]
+                    \[C^n \Pi^n_{i=m} f(i) \hspace{1cm} (\ProductConstant)\]
+
+                \subsubsection{Arithmetic Operations}
+                    Product of two functions (id \ProductFunctions) (*)
+                    \[\Pi^n_{i=m} x^i y^i = \left(x^m y^m\right) \cdot \left(x^{(m + 1}) y^{(m + 1)}\right) \cdots \left(x^{(n - 1)} y^{(n - 1)}\right) \left(x^n y^n\right) \hspace{1cm} (\ProductConstant)\]
+                    \[= \left(x^{m} \cdot x^{(m + 1)} \cdots x^{n - 1} x^n\right) \left(y^m \cdot y^{(m + 1)} \cdots y^(n - 1) \cdot y^n\right)\]
+                    \[= \Pi^n_{i=m} x^i \Pi^n_{i=m} \hspace{1cm} (\ProductConstant)\]
+
+                \subsubsection{Definition functions or numbers}
+                    Definition of a factorial (id \DefinitionFactorial) (*)
+                    \[\Pi^n_{i=1} i = 1 \cdot 2 \cdots (n - 1) \cdot n \hspace{1cm} (\ProductConstant)\]
+                    \[= n!\]
 
         \section{Elementary Algebra}
             \subsection{Notable Identities}
-                Square of a summation or difference (id 2.8) (+)
-                    \[(a + b)^2 = a + b \cdot a + b\]
-                    \[= \sum^{a + b}_{i=1} a + b \hspace{1cm} (2.6)\]
-                    \[= \sum^{a + b}_{i=1} a + \sum^{a + b}_{i=1} b \hspace{1cm} (2.5)\]
-                    \[= a(a + b) \pm b(a + b) \hspace{1cm} (2.6)\]
-                    \[= a^2 + a \cdot b + a \cdot b + b^2 \hspace{1cm} (2.12)\]
+                Square of a summation or difference (id \SquareSummationDifference) (+)
+                    \[(a + b)^2 = \Pi^2_{i=1} a + b \hspace{1cm} (\ProductConstant)\]
+                    \[=  a + b \cdot a + b \hspace{1cm} (\DefinitionProduct)\]
+                    \[= \sum^{a + b}_{i=1} a + b \hspace{1cm} (\IndexShift)\]
+                    \[= \sum^{a + b}_{i=1} a + \sum^{a + b}_{i=1} b \hspace{1cm} (\SummationAdditionFunctions)\]
+                    \[= a(a + b) \pm b(a + b) \hspace{1cm} (\SummationConstant)\]
+                    \[= a^2 + a \cdot b + a \cdot b + b^2 \hspace{1cm} (\DistributiveProperty)\]
                     \[= a^2 + 2 \cdot a \cdot b + b^2\]
     
-                Sum by difference (id 2.9) (+)
-                    \[a + b \cdot a - b = \sum^{a + b}_{i=1} a - b \hspace{1cm} (2.6)\]
-                    \[= \sum^{a + b}_{i=1} a - \sum^{a + b}_{i=1} b \hspace{1cm} (2.4)\]
-                    \[= a(a + b) - b(a + b) \hspace{1cm} (2.6)\]
-                    \[= a^2 + b \cdot a - b \cdot a - b^2 \hspace{1cm} (2.13)\]
+                Sum by difference (id \SumDifference) (+)
+                    \[a + b \cdot a - b = \sum^{a + b}_{i=1} a - b \hspace{1cm} (\SummationConstant)\]
+                    \[= \sum^{a + b}_{i=1} a - \sum^{a + b}_{i=1} b \hspace{1cm} (\SummationAdditionFunctions)\]
+                    \[= a(a + b) - b(a + b) \hspace{1cm} (\SummationConstant)\]
+                    \[= a^2 + b \cdot a - b \cdot a - b^2 \hspace{1cm} (\DistributiveProperty)\]
                     \[= a^2 - b^2\]
 
             \subsection{Property of Fractions}
-
-                Addition of two fractions (id 2.10) (+)
+                Addition of two fractions (id \AdditionTwoFractions) (+)
                 \[\frac{a}{b} + \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \frac{c \cdot b}{b \cdot d}\]
-                \[= \frac{a \cdot d + c \cdot b}{b \cdot d}\]
+                \[= \frac{a \cdot d + c \cdot b}{b \cdot d} \hspace{1cm} ()\]
 
-                Fraction of a fraction (id 2.11) (+)
+                Fraction of a fraction (id \FractionOfFraction) (+)
                 \[\frac{a}{\frac{b}{\frac{c}{d}}} = \frac{a \cdot d}{\frac{b \cdot c}{\frac{c \cdot d}{d \cdot c}}}\]
-                \[= \frac{a \cdot d}{b \cdot c}\]
+                \[= \frac{a \cdot d}{b \cdot c} \hspace{1cm} ()\]
+
+                Summation of two fractions with same divisor (id \SummationTwoFractionsSame) (*)
+                \[\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot a + c \cdot \frac{1}{b} \hspace{1cm} (2.13)\]
+                \[= \frac{1}{b} (a + c) \hspace{1cm} (2.14)\]
+                \[= \frac{a + c}{b} \hspace{1cm} (2.13)\]
 
             \subsection{Property of multiplications}
-                Distributive property (id 2.12) (+)
-                    \[a(b + c) = \sum^a_{i=1} b + c \hspace{1cm} (2.6)\]
-                    \[= \sum^a_{i=1} b + \sum^a_{i=1} c \hspace{1cm} (2.4)\]
-                    \[= a \cdot b + a \cdot c \hspace{1cm} (2.6)\]
+                Definition of multiplication (id \DefinitionMultiplication) (*)\\
+                
+                Note $b = b_1 = b_2 = \cdots = b_{n - 1} = b_n$
+                
+                \[a \cdot b = \sum^a_{i=1}b \hspace{1cm}\]
+                \[= b_1 + b_2 + \cdots + b_{n - 1} + b_n \hspace{1cm} (\DefinitionSummation)\]
 
-                Multiplication and division of the same number (id 2.13) (+)
-                    \[a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a} \hspace{1cm} (2.6)\]
-                    \[= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a} \hspace{1cm} (2.3)\]
-                    \[= \frac{2}{a} + \sum^{a - 2}_{i=1} \frac{1}{a} \hspace{1cm} (?)(2.3)\]
-                    \[\vdots\]
-                    \[= \frac{a}{a}\]
-                    \[= 1\]
-    
+                Distributive property (id \DistributiveProperty) (+)
+                \[a(b + c) = \sum^a_{i=1} b + c \hspace{1cm} (2.6)\]
+                \[= \sum^a_{i=1} b + \sum^a_{i=1} c \hspace{1cm} (2.4)\]
+                \[= a \cdot b + a \cdot c \hspace{1cm} (2.6)\]
+
+                Multiplication and division of the same number (id \MultiplicationDivisionSame) (+)
+                \[a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a} \hspace{1cm} (2.6)\]
+                \[= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a} \hspace{1cm} (2.3)\]
+                \[= \frac{2}{a} + \sum^{a - 2}_{i=1} \frac{1}{a} \hspace{1cm} (2.12)(2.3)\]
+                \[\vdots\]
+                \[= \frac{a}{a}\]
+                \[= 1\]
+
+            \subsection{Property of raised to}
+                Definition of raised to (id \RaisedToDefinition) (*)
+                \[x^a = \Pi^a_{i = 1}x\]
+
+                Value x raised to 0 (id \ValueXRaisedToZero) (*)
+                \[x^0 = \Pi^0_{i = 1}x \hspace{1cm} (\RaisedToDefinition)\]
+                \[= \frac{x}{x} \Pi^0_{i=1} x\]
+                \[= \frac{1}{x} \Pi^1_{i=1}x\]
+                \[= \frac{1}{x} \cdot x\]
+                \[= 1\]
+
+                \[x^{a + 1}\]
+            
     \chapter{Mathematical analysis}                    
         \section{Calculus}
             \subsection{Limits}
-                Note: In this section I don' t find information of how was find this formulas
-            
                 \subsubsection{Properties}
-                    If only constant (id 3.1) [1] (x)
+                    If only constant (id \LimitConstant) [1] (+)
                     \[\lim_{x \rightarrow c} k = k\]
     
-                    If only the term that approximates to (id 3.2) [1] (x)
+                    If only the term that approximates to (id \LimitToHim) [1] (+)
                     \[\lim_{x \rightarrow c} x = c\]
     
-                    If there is a constant and a function (id 3.3) [1](x)
+                    If there is a constant and a function (id \LimitConstantFuntion) [1](+)
                     \[\lim_{x \rightarrow c} k \cdot f(x) = k \lim_{x \rightarrow c} f(x)\]
     
-                    If there are two functions that are $\pm$ (id 3.4) [1] (x)
+                    If there are two functions that are $\pm$ (id \LimitSummationFunctions) [1] (+)
                     \[\lim_{x \rightarrow c} [f(x) \pm g(x)] = \lim_{x \rightarrow c} f(x) \pm \lim_{x \rightarrow c} g(x)\]
     
-                    If there are two functions that multiply (id 3.5) [1] (x)
+                    If there are two functions that multiply (id \LimitFunctionsMultiply) [1] (+)
                     \[\lim_{x \rightarrow c} [f(x) \cdot g(x)] = \lim_{x \rightarrow c} f(x) \cdot \lim_{x \rightarrow c} g(x)\]
     
-                    If there are two functions that divide (id 3.6) [1] (x)
+                    If there are two functions that divide (id \LimitDivideFunctions) [1] (+)
                     \[\lim_{x \rightarrow c} \left[\frac{f(x)}{g(x)}\right] = \frac{\lim_{x \rightarrow c} f(x)}{\lim_{x \rightarrow c} g(x)}\]
     
-                    If one function composite the other function (id 3.7) [1] (x)
+                    If one function composite the other function (id \LimitCompositeFunction) [1] (+)
                     \[\lim_{x \rightarrow c} f(g(x)) = f(\lim_{x \rightarrow c} g(x))\]                   
 
                 \subsubsection{Theorem}
-                    Squeeze Theorem $f(x) \leq g(x) \leq h(x)$ (x) [1] (id 3.8)
+                    Squeeze Theorem $f(x) \leq g(x) \leq h(x)$ [1] (id \SqueezeTheorem) (x)
                     \[\lim_{x \rightarrow c} f(x) = \lim_{x \rightarrow c} h(x) = L \rightarrow \lim_{x \rightarrow c} g(x) = L\]
 
                 \subsubsection{Definition functions or numbers}
-                    Definition of a derivative (id 3.9) (x)
+                    Definition of a derivative (id \LimitDefinitionDerivative) (+)
                     \[\frac{d}{dx} f(x) = \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h}\]
 
-                    Definition of a integral (id 3.10) (x)
+                    Definition of a integral (id \DefinitionIntegral) (+)
                     \[\int^b_a f(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} f\left(a + i \frac{b - a}{n}\right)\]
 
                 \subsubsection{Relation with other functions}
-                    Relation summation and limit (id 3.11) (*)
-                    \[\lim_{h \rightarrow a} \sum^{n}_{i=j} f(h, i) = \lim_{h \rightarrow a} \left[f(h, j) + f(h, j + 1) + \cdots + f(h, n - 1) + f(h, n)\right] \hspace{1cm} (2.5)\]
-                    \[= \lim_{h \rightarrow a} f(h, j) + \lim_{h \rightarrow a} f(h, j + 1) + \cdots + \lim_{h \rightarrow a} f(h, n - 1) + \lim_{h \rightarrow a} f(h, n) \hspace{1cm} (3.4)\]
-                    \[= \sum^n_{i=j} \lim_{h \rightarrow a} f(h, j) \hspace{1cm} (2.1)\]
+                    Relation summation and limit (id \RelationSummationLimit) (*)
+                    \[\lim_{h \rightarrow a} \sum^{n}_{i=j} f(h, i) = \lim_{h \rightarrow a} \left[f(h, j) + f(h, j + 1) + \cdots + f(h, n - 1) + f(h, n)\right] \hspace{1cm} (\DefinitionSummation)\]
+                    \[= \lim_{h \rightarrow a} f(h, j) + \lim_{h \rightarrow a} f(h, j + 1) + \cdots + \lim_{h \rightarrow a} f(h, n - 1) + \lim_{h \rightarrow a} f(h, n) \hspace{1cm} (\LimitSummationFunctions)\]
+                    \[= \sum^n_{i=j} \lim_{h \rightarrow a} f(h, j) \hspace{1cm} (\DefinitionSummation)\]
         
             \subsection{Derivative}
                 \subsubsection{With Constants}
-                    Derivative of constant multiply and function (id 3.12) (+)
-                    \[\frac{d}{dx} [C f(x)] = \lim_{h \rightarrow 0} \frac{C \cdot f(x + h) - C \cdot f(x)}{h} \hspace{1cm} (3.8)\]
-                    \[= C \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \hspace{1cm} (2.13)\]
-                    \[= C \frac{d}{dx} f(x) \hspace{1cm} (3.8)\]
+                    Derivative of constant multiply and function (id \DerivativeConstantMultiply) (+)
+                    \[\frac{d}{dx} [C f(x)] = \lim_{h \rightarrow 0} \frac{C \cdot f(x + h) - C \cdot f(x)}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
+                    \[= \lim_{h \rightarrow 0} C \frac{f(x + h) - f(x)}{h} \hspace{1cm} (\DistributiveProperty)\]
+                    \[= C \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \hspace{1cm} (\LimitConstantFuntion)\]
+                    \[= C \frac{d}{dx} f(x) \hspace{1cm} (\LimitDefinitionDerivative)\]
 
-                    Derivative of a constant (id 3.13) (+)
-                    \[\frac{d}{dx} [C] = \lim_{h \rightarrow 0} \frac{C - C}{h} \hspace{1cm} (3.8)\]
+                    Derivative of a constant (id \DerivativeConstant) (+)
+                    \[\frac{d}{dx} [C] = \lim_{h \rightarrow 0} \frac{C - C}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
                     \[= 0\]
 
                 \subsubsection{Arithmetic Operations}
-                    Derivative of the addition or subtraction of two functions (id 3.14) (+)
-                    \[\frac{d}{dx} [f(x) \pm g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \pm g(x + h) - f(x) -g(x)}{h} \hspace{1cm} (3.8)\]
-                    \[= \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \pm \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (3.4)\]
-                    \[= \frac{d}{dx} f(x) \pm \frac{d}{dx} g(x) \hspace{1cm} (3.8)\]
+                    Derivative of the addition or subtraction of two functions (id \DerivativeAdditionFunction) (+)
+                    \[\frac{d}{dx} [f(x) \pm g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \pm g(x + h) - f(x) -g(x)}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
+                    \[= \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \pm \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (\LimitSummationFunctions)\]
+                    \[= \frac{d}{dx} f(x) \pm \frac{d}{dx} g(x) \hspace{1cm} (\LimitDefinitionDerivative)\]
     
-                    Derivative of a multiply of two functions (id 3.15) (+)
-                    \[\frac{d}{dx} [f(x) \cdot g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x)}{h} \hspace{1cm} (3.8)\]
+                    Derivative of a multiply of two functions (id \DerivativeMultiplyFunctions) (+)
+                    \[\frac{d}{dx} [f(x) \cdot g(x)] = \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x)}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
 
                     Note: addition and subtraction of $f(x) \cdot g(x + h)$
                     \[= \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x) + f(x) \cdot g(x + h) - f(x) g(x + h)}{h}\]
                     \[= \lim_{h \rightarrow 0} \frac{[f(x + h) \cdot g(x + h) - f(x) \cdot g(x + h)] + [f(x) \cdot g(x + h) - f(x) \cdot g(x)]}{h}\]
-                    \[= \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x + h)}{h} + \lim_{h \rightarrow 0} \frac{f(x) \cdot g(x + h) - f(x) \cdot g(x)}{h} \hspace{1cm} (3.4)\]
-                    \[= \lim_{h \rightarrow 0} \frac{g(x + h) \cdot [f(x + h) - f(x)]}{h} + \lim_{h \rightarrow 0} \frac{f(x) \cdot [g(x + h) - g(x)]}{h} \hspace{1cm} (2.13)\]
-                    \[= \lim_{h \rightarrow 0} g(x + h) \cdot \lim_{h \rightarrow 0}\frac{f(x + h - f(x))}{h} + \lim_{h \rightarrow 0} f(x) \cdot \lim_{h \rightarrow 0} f(x) \cdot \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (3.3)\]
-                    \[= g(x) \cdot \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} + f(x) \cdot \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (3.2) (3.1)\]
-                    \[= g(x) \cdot \frac{d}{dx} [f(x)] + f(x) \cdot \frac{d}{dx} [g(x)] \hspace{1cm} (3.8)\]                    
+                    \[= \lim_{h \rightarrow 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x + h)}{h} + \lim_{h \rightarrow 0} \frac{f(x) \cdot g(x + h) - f(x) \cdot g(x)}{h} \hspace{1cm} (\LimitSummationFunctions)\]
+                    \[= \lim_{h \rightarrow 0} \frac{g(x + h) \cdot [f(x + h) - f(x)]}{h} + \lim_{h \rightarrow 0} \frac{f(x) \cdot [g(x + h) - g(x)]}{h} \hspace{1cm} (\DistributiveProperty)\]
+                    \[= \lim_{h \rightarrow 0} g(x + h) \cdot \lim_{h \rightarrow 0}\frac{f(x + h) - f(x)}{h} + \lim_{h \rightarrow 0} f(x) \cdot \lim_{h \rightarrow 0} f(x) \cdot \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (\LimitConstantFuntion)\]
+                    \[= g(x) \cdot \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} + f(x) \cdot \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (\LimitToHim) (\LimitConstant)\]
+                    \[= g(x) \cdot \frac{d}{dx} [f(x)] + f(x) \cdot \frac{d}{dx} [g(x)] \hspace{1cm} (\LimitDefinitionDerivative)\]                    
 
                     Derivative of a function elevate by a constant (id 3.16) (?) \\
 
@@ -268,12 +376,15 @@
                         \item Make by: Khan Academy
                     \end{itemize}
                     
-                    \[\frac{d}{dx} f^n(x) = \lim_{h \rightarrow 0} \frac{f^n(x + h) - f^n(x)}{h} \hspace{1cm} (3.8)\]
+                    \[\frac{d}{dx} f^n(x) = \lim_{h \rightarrow 0} \frac{f^n(x + h) - f^n(x)}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
                     \[= \lim_{h \rightarrow 0} \frac{-f^n(x) + \sum^n_{k=0} \binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h} \hspace{1cm} (?)\]
-                    \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \frac{\binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h} \hspace{1cm} (2.4)\]
-                    \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \binom{n}{k} f^{n - k}(x + h) \cdot h^{k - 1}\]
+                    \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \frac{\binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h} \hspace{1cm} (\SubtractionInferiorLimit)\]
+                    \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \binom{n}{k} f^{n - k}(x + h) \cdot h^{k - 1} \hspace{1cm} (\ValueXRaisedPlus)\]
                     \[= \sum^n_{k=1} \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k} (x + h) \cdot h^{k - 1} \hspace{1cm} (3.11)\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (2.1)\]
+                    \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^0 + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2} (x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1}\]
+                    \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (\ValueXRaisedToZero)\]
+                    \[= \binom{n}{1} n \cdot f^{n - 1}(x) \hspace{1cm} (?)\]
                     \[= n \cdot f^{n - 1}(x)\]
 
                     Derivative of a division of two functions (id 3.17) (+)
