@@ -1,0 +1,13 @@
+{
+  "name": "owl-finder",
+  "version": "1.0.0",
+  "description": "This program is the browser of the project, the user will make his request and the browser will search the request in the data of this project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Whithe Mask 230 (Lucas Varela Correa)",
+  "license": "Creative Commons Attribution-NonCommercial 4.0 International Public"
+}
