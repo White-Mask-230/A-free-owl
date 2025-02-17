@@ -30,45 +30,46 @@
     \expandafter\edef\csname #1\endcsname{#2.\arabic{counter}}
 }
 
-\NewId{DefinitionSummation}{2}
-\NewId{IndexShift}{2}
-\NewId{SubtractionSuperiorLimit}{2}
-\NewId{SubtractionInferiorLimit}{2}
-\NewId{SummationAdditionFunctions}{2}
-\NewId{SummationConstant}{2}
-\NewId{SummationConstantMultiplication}{2}
-\NewId{DefinitionProduct}{2}
-\NewId{ProductConstant}{2}
-\NewId{ProductFunctionConstant}{2}
-\NewId{ProductFunctions}{2}
-\NewId{DefinitionFactorial}{2}
-\NewId{SquareSummationDifference}{2}
-\NewId{SumDifference}{2}
-\NewId{AdditionTwoFractions}{2}
-\NewId{FractionOfFraction}{2}
-\NewId{SummationTwoFractionsSame}{2}
-\NewId{DefinitionMultiplication}{2}
-\NewId{DistributiveProperty}{2}
-\NewId{MultiplicationDivisionSame}{2}
-\NewId{RaisedToDefinition}{2}
-\NewId{ValueXRaisedToZero}{2}
-\NewId{ValueXRaisedPlus}{2}
+\NewId{DefinitionSummation}{2} %1
+\NewId{IndexShift}{2} %2
+\NewId{SubtractionSuperiorLimit}{2} %3
+\NewId{SubtractionInferiorLimit}{2} %4
+\NewId{SummationAdditionFunctions}{2} %5
+\NewId{SummationConstant}{2} %6
+\NewId{SummationConstantMultiplication}{2} %7
+\NewId{DefinitionProduct}{2} %8
+\NewId{ProductConstant}{2} %9
+\NewId{ProductFunctionConstant}{2} %10
+\NewId{RemoveOneTopLimit}{2} %11
+\NewId{ProductFunctions}{2} %12
+\NewId{DefinitionFactorial}{2} %13
+\NewId{SquareSummationDifference}{2} %14
+\NewId{SumDifference}{2} %15
+\NewId{AdditionTwoFractions}{2} %16
+\NewId{FractionOfFraction}{2} %17
+\NewId{SummationTwoFractionsSame}{2} %18
+\NewId{DefinitionMultiplication}{2} %19
+\NewId{DistributiveProperty}{2} %20
+\NewId{MultiplicationDivisionSame}{2} %21
+\NewId{RaisedToDefinition}{2} %22
+\NewId{ValueXRaisedToZero}{2} %23
+\NewId{ValueXRaisedPlus}{2} %24
 
-\NewId{LimitConstant}{3}
-\NewId{LimitToHim}{3}
-\NewId{LimitConstantFuntion}{3}
-\NewId{LimitSummationFunctions}{3}
-\NewId{LimitFunctionsMultiply}{3}
-\NewId{LimitDivideFunctions}{3}
-\NewId{LimitCompositeFunction}{3}
-\NewId{SqueezeTheorem}{3}
-\NewId{LimitDefinitionDerivative}{3}
-\NewId{DefinitionIntegral}{3}
-\NewId{RelationSummationLimit}{3}
-\NewId{DerivativeConstantMultiply}{3}
-\NewId{DerivativeConstant}{3}
-\NewId{DerivativeAdditionFunction}{3}
-\NewId{DerivativeMultiplyFunctions}{3}
+\NewId{LimitConstant}{3} %1
+\NewId{LimitToHim}{3} %2
+\NewId{LimitConstantFuntion}{3} %3
+\NewId{LimitSummationFunctions}{3} %4
+\NewId{LimitFunctionsMultiply}{3} %5
+\NewId{LimitDivideFunctions}{3} %6
+\NewId{LimitCompositeFunction}{3} %7
+\NewId{SqueezeTheorem}{3} %8
+\NewId{LimitDefinitionDerivative}{3} %9
+\NewId{DefinitionIntegral}{3} %10
+\NewId{RelationSummationLimit}{3} %11
+\NewId{DerivativeConstantMultiply}{3} %12
+\NewId{DerivativeConstant}{3} %13
+\NewId{DerivativeAdditionFunction}{3} %14
+\NewId{DerivativeMultiplyFunctions}{3} %15
 
 \begin{document}
     % Create front page
@@ -218,6 +219,11 @@
                     \[\Pi^n_{i=m} C f(i) = \Pi^n_{i=m} C \Pi^n_{i=m} f(i) \hspace{1cm} (\ProductFunctionConstant)\]
                     \[C^n \Pi^n_{i=m} f(i) \hspace{1cm} (\ProductConstant)\]
 
+                \subsubsection{Change limits}
+                    Remove one top limit (id \RemoveOneTopLimit) (*)
+                    \[\Pi^n_{i=m}x_i = x_m \cdot x_{m + 1} \cdots x_{n - 1} \cdot x_n \hspace{1cm} (\DefinitionProduct)\]
+                    \[= x_n \Pi^{n - 1}_{i=m} x_i \hspace{1cm} (\DefinitionProduct)\]
+
                 \subsubsection{Arithmetic Operations}
                     Product of two functions (id \ProductFunctions) (*)
                     \[\Pi^n_{i=m} x^i y^i = \left(x^m y^m\right) \cdot \left(x^{(m + 1}) y^{(m + 1)}\right) \cdots \left(x^{(n - 1)} y^{(n - 1)}\right) \left(x^n y^n\right) \hspace{1cm} (\ProductConstant)\]
@@ -250,11 +256,11 @@
             \subsection{Property of Fractions}
                 Addition of two fractions (id \AdditionTwoFractions) (+)
                 \[\frac{a}{b} + \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \frac{c \cdot b}{b \cdot d}\]
-                \[= \frac{a \cdot d + c \cdot b}{b \cdot d} \hspace{1cm} ()\]
+                \[= \frac{a \cdot d + c \cdot b}{b \cdot d}\]
 
                 Fraction of a fraction (id \FractionOfFraction) (+)
                 \[\frac{a}{\frac{b}{\frac{c}{d}}} = \frac{a \cdot d}{\frac{b \cdot c}{\frac{c \cdot d}{d \cdot c}}}\]
-                \[= \frac{a \cdot d}{b \cdot c} \hspace{1cm} ()\]
+                \[= \frac{a \cdot d}{b \cdot c}\]
 
                 Summation of two fractions with same divisor (id \SummationTwoFractionsSame) (*)
                 \[\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot a + c \cdot \frac{1}{b} \hspace{1cm} (2.13)\]
@@ -274,6 +280,7 @@
                 \[= \sum^a_{i=1} b + \sum^a_{i=1} c \hspace{1cm} (2.4)\]
                 \[= a \cdot b + a \cdot c \hspace{1cm} (2.6)\]
 
+                \subsubsection{Relation Other Functions}
                 Multiplication and division of the same number (id \MultiplicationDivisionSame) (+)
                 \[a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a} \hspace{1cm} (2.6)\]
                 \[= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a} \hspace{1cm} (2.3)\]
@@ -289,11 +296,14 @@
                 Value x raised to 0 (id \ValueXRaisedToZero) (*)
                 \[x^0 = \Pi^0_{i = 1}x \hspace{1cm} (\RaisedToDefinition)\]
                 \[= \frac{x}{x} \Pi^0_{i=1} x\]
-                \[= \frac{1}{x} \Pi^1_{i=1}x\]
-                \[= \frac{1}{x} \cdot x\]
-                \[= 1\]
+                \[= \frac{1}{x} \Pi^1_{i=1}x \hspace{1cm} (\RemoveOneTopLimit)\]
+                \[= \frac{1}{x} \cdot x  \hspace{1cm} (\DefinitionProduct)\]
+                \[= 1 \hspace{1cm} (\MultiplicationDivisionSame)\]
 
-                \[x^{a + 1}\]
+                Value x raised to a + 1 (id \ValueXRaisedPlus) (*)
+                \[x^{a + 1} = \Pi^{a + 1}_{i=m} x \hspace{1cm} (\ProductConstant)\]
+                \[= x\Pi^{a}_{i=m}x \hspace{1cm} (\RemoveOneTopLimit)\]
+                \[= x x^a \hspace{1cm} (\ProductConstant)\]
             
     \chapter{Mathematical analysis}                    
         \section{Calculus}
@@ -384,8 +394,8 @@
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (2.1)\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^0 + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2} (x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1}\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (\ValueXRaisedToZero)\]
-                    \[= \binom{n}{1} n \cdot f^{n - 1}(x) \hspace{1cm} (?)\]
-                    \[= n \cdot f^{n - 1}(x)\]
+                    \[= \binom{n}{1} n \cdot f^{n - 1}(x) \hspace{1cm}\]
+                    \[= n \cdot f^{n - 1}(x) \hspace{1cm} (?)\]
 
                     Derivative of a division of two functions (id 3.17) (+)
                     \[\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{d}{dx} [f(x) \cdot g^{-1}(x)]\]
