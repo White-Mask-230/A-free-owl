@@ -45,15 +45,19 @@
 \NewId{DefinitionFactorial}{2} %13
 \NewId{SquareSummationDifference}{2} %14
 \NewId{SumDifference}{2} %15
-\NewId{AdditionTwoFractions}{2} %16
-\NewId{FractionOfFraction}{2} %17
-\NewId{SummationTwoFractionsSame}{2} %18
-\NewId{DefinitionMultiplication}{2} %19
-\NewId{DistributiveProperty}{2} %20
-\NewId{MultiplicationDivisionSame}{2} %21
-\NewId{RaisedToDefinition}{2} %22
-\NewId{ValueXRaisedToZero}{2} %23
-\NewId{ValueXRaisedPlus}{2} %24
+\NewId{MultiplyFraction}{2} %16
+\NewId{AdditionTwoFractions}{2} %17
+\NewId{FractionOfFraction}{2} %18
+\NewId{SummationTwoFractionsSame}{2} %19
+\NewId{SeparateNumerator}{2} %20
+\NewId{DivideAWithA}{2} %21
+\NewId{DefinitionMultiplication}{2} %22
+\NewId{DistributiveProperty}{2} %23
+\NewId{MultiplicationDivisionSame}{2} %24
+\NewId{RaisedToDefinition}{2} %25
+\NewId{ValueXRaisedToZero}{2} %26
+\NewId{ValueXRaisedPlus}{2} %27
+\NewId{ValueRaisedNegative}{2} %28
 
 \NewId{LimitConstant}{3} %1
 \NewId{LimitToHim}{3} %2
@@ -70,6 +74,17 @@
 \NewId{DerivativeConstant}{3} %13
 \NewId{DerivativeAdditionFunction}{3} %14
 \NewId{DerivativeMultiplyFunctions}{3} %15
+\NewId{DerivativeFunctionElevateConstant}{3} %16
+\NewId{DerivativeDivisionTwoFunctions}{3} %17
+\NewId{DerivateRelationEX}{3} %18
+\NewId{DerivationRelationIntegral}{3} %19
+\NewId{DerivateRelationSummation}{3} %20
+\NewId{DerivativeFunctionDigamma}{3} %21
+\NewId{IntegralMultiplyFunctionConstant}{3} %22
+\NewId{IntegralConstant}{3} %23
+\NewId{IntegralAdditionTwoFunctions}{3} % 24
+\NewId{IntegralFunctionElevate}{3} %25
+\NewId{IntegralSummation}{3} %26
 
 \begin{document}
     % Create front page
@@ -254,40 +269,58 @@
                     \[= a^2 - b^2\]
 
             \subsection{Property of Fractions}
+                Multiply a Fraction (id \MultiplyFraction) (*)
+                \[\frac{1}{b} \cdot a = \sum^a_{i=1}\frac{1}{b} \hspace{1cm} (\SummationConstant)\]
+                \[= \frac{1}{b} + \sum^{a - 1}_{i=1}\frac{1}{b} \hspace{1cm} (\IndexShift)\]
+                \[= \frac{2}{b} + \sum^{a - 2}_{i=1}\frac{1}{b} \hspace{1cm} (\IndexShift)\]
+                \[\vdots\]
+                \[= \frac{a}{b}\]
+            
                 Addition of two fractions (id \AdditionTwoFractions) (+)
-                \[\frac{a}{b} + \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \frac{c \cdot b}{b \cdot d}\]
-                \[= \frac{a \cdot d + c \cdot b}{b \cdot d}\]
+                \[\frac{a}{b} + \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \frac{c \cdot b}{d \cdot b} \hspace{1cm} (\DivideAWithA)\]
+                \[= \frac{a \cdot d + c \cdot b}{b \cdot d} \hspace{1cm} (\SummationTwoFractionsSame)\]
 
                 Fraction of a fraction (id \FractionOfFraction) (+)
-                \[\frac{a}{\frac{b}{\frac{c}{d}}} = \frac{a \cdot d}{\frac{b \cdot c}{\frac{c \cdot d}{d \cdot c}}}\]
-                \[= \frac{a \cdot d}{b \cdot c}\]
+                \[\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{\frac{a}{b} \cdot \frac{d}{c}}{\frac{c}{d} \cdot \frac{d}{c}} \hspace{1cm} (\DivideAWithA)\]
+                \[= \frac{\frac{a}{b} \cdot \frac{c}{d}}{\frac{c}{d} \cdot d \cdot \frac{1}{c}} \hspace{1cm} (\MultiplyFraction)\]
+                \[= \frac{\frac{a}{b} \cdot \frac{c}{d}}{\frac{c \cdot d}{d \cdot c}} \hspace{1cm} (\SeparateNumerator) (\SummationTwoFractionsSame)\]
+                \[= \frac{a}{b} \cdot \frac{c}{d} \hspace{1cm} (\DivideAWithA)\]
 
                 Summation of two fractions with same divisor (id \SummationTwoFractionsSame) (*)
-                \[\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot a + c \cdot \frac{1}{b} \hspace{1cm} (2.13)\]
-                \[= \frac{1}{b} (a + c) \hspace{1cm} (2.14)\]
-                \[= \frac{a + c}{b} \hspace{1cm} (2.13)\]
+                \[\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot a + c \cdot \frac{1}{b} \hspace{1cm} (\MultiplyFraction)\]
+                \[= \frac{1}{b} (a + c) \hspace{1cm} (\DistributiveProperty)\]
+                \[= \frac{a + c}{b} \hspace{1cm} (\MultiplyFraction)\]
+
+                Separate numerator (id \SeparateNumerator) (*)
+                \[\frac{a}{b \cdot c} = \frac{a \cdot \frac{1}{c}}{b \cdot c \cdot \frac{1}{c}} \hspace{1cm} (\DivideAWithA)\]
+                \[= \frac{a \cdot \frac{1}{c}}{b} \hspace{1cm} (\MultiplicationDivisionSame)\]
+                \[= \frac{a}{b} \cdot \frac{1}{c} \hspace{1cm} (\MultiplyFraction)\]
+
+                Divide a with a (id \DivideAWithA) (*)
+                \[\frac{a}{a} = a \cdot \frac{1}{a} \hspace{1cm} (\MultiplyFraction)\]
+                \[= 1 \hspace{1cm} (\MultiplicationDivisionSame)\]
 
             \subsection{Property of multiplications}
                 Definition of multiplication (id \DefinitionMultiplication) (*)\\
                 
                 Note $b = b_1 = b_2 = \cdots = b_{n - 1} = b_n$
                 
-                \[a \cdot b = \sum^a_{i=1}b \hspace{1cm}\]
+                \[a \cdot b = \sum^a_{i=1}b \hspace{1cm} \hspace{1cm} (\SummationConstant)\]
                 \[= b_1 + b_2 + \cdots + b_{n - 1} + b_n \hspace{1cm} (\DefinitionSummation)\]
 
                 Distributive property (id \DistributiveProperty) (+)
-                \[a(b + c) = \sum^a_{i=1} b + c \hspace{1cm} (2.6)\]
-                \[= \sum^a_{i=1} b + \sum^a_{i=1} c \hspace{1cm} (2.4)\]
-                \[= a \cdot b + a \cdot c \hspace{1cm} (2.6)\]
+                \[a(b + c) = \sum^a_{i=1} b + c \hspace{1cm} (\SummationConstant)\]
+                \[= \sum^a_{i=1} b + \sum^a_{i=1} c \hspace{1cm} (\SummationAdditionFunctions)\]
+                \[= a \cdot b + a \cdot c \hspace{1cm} (\SummationConstant)\]
 
                 \subsubsection{Relation Other Functions}
                 Multiplication and division of the same number (id \MultiplicationDivisionSame) (+)
-                \[a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a} \hspace{1cm} (2.6)\]
-                \[= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a} \hspace{1cm} (2.3)\]
-                \[= \frac{2}{a} + \sum^{a - 2}_{i=1} \frac{1}{a} \hspace{1cm} (2.12)(2.3)\]
+                \[a \cdot \frac{1}{a} = \sum^a_{i=1} \frac{1}{a} \hspace{1cm} (\SummationConstant)\]
+                \[= \frac{1}{a} + \sum^{a - 1}_{i=1} \frac{1}{a} \hspace{1cm} (\SubtractionSuperiorLimit)\]
+                \[= \frac{2}{a} + \sum^{a - 2}_{i=1} \frac{1}{a} \hspace{1cm} (\MultiplyFraction)(\SubtractionSuperiorLimit)\]
                 \[\vdots\]
-                \[= \frac{a}{a}\]
-                \[= 1\]
+                \[= \frac{a}{a} \hspace{1cm}\]
+                \[= 1 \hspace{1cm} (\DivideAWithA)\]
 
             \subsection{Property of raised to}
                 Definition of raised to (id \RaisedToDefinition) (*)
@@ -301,9 +334,17 @@
                 \[= 1 \hspace{1cm} (\MultiplicationDivisionSame)\]
 
                 Value x raised to a + 1 (id \ValueXRaisedPlus) (*)
-                \[x^{a + 1} = \Pi^{a + 1}_{i=m} x \hspace{1cm} (\ProductConstant)\]
-                \[= x\Pi^{a}_{i=m}x \hspace{1cm} (\RemoveOneTopLimit)\]
+                \[x^{a + 1} = \Pi^{a + 1}_{i=1} x \hspace{1cm} (\ProductConstant)\]
+                \[= x\Pi^{a}_{i=1}x \hspace{1cm} (\RemoveOneTopLimit)\]
                 \[= x x^a \hspace{1cm} (\ProductConstant)\]
+
+                Value x raised to -a (id \ValueRaisedNegative) (*)
+                \[x^{-a} = \Pi^{-a}_{i=1}x \hspace{1cm} (\DefinitionProduct)\]
+                \[= \frac{x^a}{x^a} \Pi^{-a}_{i=1} x\]
+                \[= \frac{1}{x^a} \Pi^a_{i=1} x \Pi^{-a}_{i=1} x \hspace{1cm} (\ProductConstant)\]
+                \[= \frac{1}{x^a} \Pi^{a-a}_{i=1} x \hspace{1cm} (\RemoveOneTopLimit)\]
+                Note: The above explanation formula. Using the formula of removing one top limit, reversing the operation, we can add 1 to the upper limit of the production of living $\frac{1}{x}$. This process can be repeated $a$ times because we have $x$ multiplicate $a$ times. So we can write it as $a \cdot 1$ which is equal to $a$
+                \[= \frac{1}{x^a} \hspace{1cm} (\ValueXRaisedToZero)\]
             
     \chapter{Mathematical analysis}                    
         \section{Calculus}
@@ -377,7 +418,7 @@
                     \[= g(x) \cdot \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} + f(x) \cdot \lim_{h \rightarrow 0} \frac{g(x + h) - g(x)}{h} \hspace{1cm} (\LimitToHim) (\LimitConstant)\]
                     \[= g(x) \cdot \frac{d}{dx} [f(x)] + f(x) \cdot \frac{d}{dx} [g(x)] \hspace{1cm} (\LimitDefinitionDerivative)\]                    
 
-                    Derivative of a function elevate by a constant (id 3.16) (?) \\
+                    Derivative of a function elevate by a constant (id \DerivativeFunctionElevateConstant) (?) \\
 
                     Note: Credits to
                     \begin{itemize}
@@ -390,64 +431,65 @@
                     \[= \lim_{h \rightarrow 0} \frac{-f^n(x) + \sum^n_{k=0} \binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h} \hspace{1cm} (?)\]
                     \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \frac{\binom{n}{k} f^{n - k}(x + h) \cdot h^k}{h} \hspace{1cm} (\SubtractionInferiorLimit)\]
                     \[= \lim_{h \rightarrow 0} \sum^n_{k=1} \binom{n}{k} f^{n - k}(x + h) \cdot h^{k - 1} \hspace{1cm} (\ValueXRaisedPlus)\]
-                    \[= \sum^n_{k=1} \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k} (x + h) \cdot h^{k - 1} \hspace{1cm} (3.11)\]
-                    \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (2.1)\]
+                    \[= \sum^n_{k=1} \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k} (x + h) \cdot h^{k - 1} \hspace{1cm} (\RelationSummationLimit)\]
+                    \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^{1 - 1} + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^{2 - 1} + \cdots + \lim_{h \rightarrow 0}\binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (\DefinitionSummation)\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) h^0 + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2} (x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1}\]
                     \[= \lim_{h \rightarrow 0} \binom{n}{1} f^{n - 1}(x + h) + \lim_{h \rightarrow 0} \binom{n}{2} f^{n - 2}(x + h) h^1 + \cdots + \lim_{h \rightarrow 0} \binom{n}{k} f^{n - k}(x + h) h^{k - 1} \hspace{1cm} (\ValueXRaisedToZero)\]
-                    \[= \binom{n}{1} n \cdot f^{n - 1}(x) \hspace{1cm}\]
+                    \[= \binom{n}{1} n \cdot f^{n - 1}(x) \hspace{1cm} \hspace{1cm} (\LimitConstant)\]
                     \[= n \cdot f^{n - 1}(x) \hspace{1cm} (?)\]
 
-                    Derivative of a division of two functions (id 3.17) (+)
+                    Derivative of a division of two functions (id \DerivativeDivisionTwoFunctions) (+)
                     \[\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{d}{dx} [f(x) \cdot g^{-1}(x)]\]
-                    \[= g^{-1}(x) \cdot \frac{d}{dx}f(x) + f(x) \cdot \frac{d}{dx} g^{-1}(x) \hspace{1cm} (3.15)\]
-                    \[= g^{-1}(x) \frac{d}{dx} f(x) - f(x) \cdot g^{-2}(x) \cdot \frac{d}{dx}g(x) \hspace{1cm} (3.16)\]
-                    \[= \frac{g(x) \frac{d}{dx} f(x) - f(x) \cdot \frac{d}{dx} g(x)}{g^2(x)}\]
+                    \[= g^{-1}(x) \cdot \frac{d}{dx}f(x) + f(x) \cdot \frac{d}{dx} g^{-1}(x) \hspace{1cm} (\DerivativeMultiplyFunctions)\]
+                    \[= g^{-1}(x) \frac{d}{dx} f(x) - f(x) \cdot g^{-2}(x) \cdot \frac{d}{dx}g(x) \hspace{1cm} (\DerivativeFunctionElevateConstant)\]
+                    \[= \frac{g(x) \frac{d}{dx} f(x) - f(x) \cdot \frac{d}{dx} g(x)}{g^2(x)} \hspace{1cm} (\ValueRaisedNegative)\]
 
                 \subsubsection{Relation with other functions}
-                    Relation with $e^x$ (id 3.18) (+)
-                    \[\frac{d}{dx}[e^x] = \lim_{h \rightarrow 0} \frac{e^{x + h} - e^x}{h} \hspace{1cm} (3.9)\]
-                    \[= \lim_{h \rightarrow 0} \frac{e^x \cdot e^h - e^x}{h} \hspace{1cm} (?)\]
-                    \[= \lim_{h \rightarrow 0} \frac{e^x (e^h - 1)}{h} \hspace{1cm} (2.13)\]
-                    \[= \lim_{h \rightarrow 0} \frac{e^x(1 - 1)}{h} \hspace{1cm} (?)\]
-                    \[= e^x \lim_{h \rightarrow 0} \frac{1 - 1}{h} \hspace{1cm} (3.3)(?)\]
-                    \[= e^x \lim_{h \rightarrow 0} \frac{h}{h}\]
-                    \[= e^x\]
+                    Relation with $e^x$ (id \DerivateRelationEX) (*)
+                    \[\frac{d}{dx}[e^x] = \lim_{h \rightarrow 0} \frac{e^{x + h} - e^x}{h} \hspace{1cm} (\LimitDefinitionDerivative)\]
+                    \[= \lim_{h \rightarrow 0} \frac{e^x \cdot e^h - e^x}{h} \hspace{1cm} (\ValueXRaisedPlus)\]
+                    \[= \lim_{h \rightarrow 0} \frac{e^x (e^h - 1)}{h} \hspace{1cm} (\DistributiveProperty)\]
+                    \[= \lim_{h \rightarrow 0} \frac{e^x(1 - 1)}{h} \hspace{1cm} (\ValueXRaisedToZero)\]
+                    \[= e^x \lim_{h \rightarrow 0} \frac{1 - 1}{h} \hspace{1cm} (\LimitConstantFuntion)\]
+                    \[= e^x \lim_{h \rightarrow 0} \frac{h}{h} \hspace{1cm} (\LimitToHim)\]
+                    \[= e^x \hspace{1cm} (\DivideAWithA)\]
 
-                    Relation with $\int$ (id 3.19) (+)
-                    \[\frac{d}{dx} \left[\int^b_a dx f(x) \right] = \lim_{h \rightarrow 0} \frac{1}{h} \left(\int^b_a dx f(x + h) - \int^b_a dx f(x) \right) \hspace{1cm} (3.9)\]
-                    \[= \lim_{h \rightarrow 0} \frac{1}{h} \int^b_a dx f(x + h) - f(x) \hspace{1cm} (3.24)\]
-                    \[= \lim_{h \rightarrow 0} \int^b_a dx \frac{f(x + h) - f(x)}{h} \hspace{1cm} (3.22)\]
-                    \[= \int^b_a dx \frac{d}{dx} f(x) \hspace{1cm} (3.9)\]
+                    Relation with $\int$ (id \DerivationRelationIntegral) (+)
+                    \[\frac{d}{dx} \left[\int^b_a dx f(x) \right] = \lim_{h \rightarrow 0} \frac{1}{h} \left(\int^b_a dx f(x + h) - \int^b_a dx f(x) \right) \hspace{1cm} (\DerivativeAdditionFunction)\]
+                    \[= \lim_{h \rightarrow 0} \frac{1}{h} \int^b_a dx f(x + h) - f(x) \hspace{1cm} (\IntegralAdditionTwoFunctions)\]
+                    \[= \lim_{h \rightarrow 0} \int^b_a dx \frac{f(x + h) - f(x)}{h} \hspace{1cm} (\IntegralMultiplyFunctionConstant)(\MultiplyFraction)\]
+                    \[= \int^b_a dx \frac{d}{dx} f(x) \hspace{1cm} (\LimitDefinitionDerivative)\]
 
-                    Relation with $\sum$ (id 3.20) (+)
-                    \[\frac{d}{dx} \left[\sum^n_{i=j} f(i, x) \right] = \frac{d}{dx} [f(j, x) + f(j + 1, x) + \cdots + f(n - 1, x) + f(n, x)] \hspace{1cm} (3.9)\]
-                    \[= \frac{d}{dx} f(j, x) + \frac{d}{dx} f(j + 1, x) + \cdots + \frac{d}{dx} f(n - 1, x) + \frac{d}{dx} f(n, x) \hspace{1cm} (3.14)\]
-                    \[= \sum^n_{i=j} \frac{d}{dx} f(i, x) \hspace{1cm} (2.1)\]
+                    Relation with $\sum$ (id \DerivateRelationSummation) (+)
+                    \[\frac{d}{dx} \left[\sum^n_{i=j} f(i, x) \right] = \frac{d}{dx} [f(j, x) + f(j + 1, x) + \cdots + f(n - 1, x) + f(n, x)] \hspace{1cm} (\LimitDefinitionDerivative)\]
+                    \[= \frac{d}{dx} f(j, x) + \frac{d}{dx} f(j + 1, x) + \cdots + \frac{d}{dx} f(n - 1, x) + \frac{d}{dx} f(n, x) \hspace{1cm} (\DerivativeAdditionFunction)\]
+                    \[= \sum^n_{i=j} \frac{d}{dx} f(i, x) \hspace{1cm} (\DefinitionSummation)\]
                 
                 \subsubsection{Definition functions or numbers}
-                    Function digamma (id 3.21) (?)
-                    \[\psi(x) = \frac{d}{dx} \ln[\Gamma(x)] = \frac{\frac{d}{dx} \Gamma(x)}{\Gamma(x)}\]
+                    Function digamma (id \DerivativeFunctionDigamma) (?)
+                    \[\psi(x) = \frac{d}{dx} \ln[\Gamma(x)] \hspace{1cm} (?)\]
+                    \[= \frac{\frac{d}{dx} \Gamma(x)}{\Gamma(x)} \hspace{1cm} (?)\]
 
             \subsection{Integrals}
                 \subsubsection{Constants}
-                    Integral of the multiply of a function and a constant (id 3.22) (+)
-                    \[\int^b_a C \cdot f(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C \cdot f\left(a + i \frac{b - a}{n}\right) \hspace{1cm} (3.10)\]
-                    \[= C \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} f \left(a + i\frac{b - a}{n}\right) \hspace{1cm} (2.7)(3.3)\]
-                    \[= C \int^b_a f(x) dx \hspace{1cm} (3.10)\]
+                    Integral of the multiply of a function and a constant (id \IntegralMultiplyFunctionConstant) (+)
+                    \[\int^b_a C \cdot f(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C \cdot f\left(a + i \frac{b - a}{n}\right) \hspace{1cm} (\DefinitionIntegral)\]
+                    \[= C \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} f \left(a + i\frac{b - a}{n}\right) \hspace{1cm} (\SummationConstantMultiplication)(\LimitConstantFuntion)\]
+                    \[= C \int^b_a f(x) dx \hspace{1cm} (\DefinitionIntegral)\]
 
-                    Integral of a constant (id 3.23) (+)
-                    \[\int^b_a dx \cdot C = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C \hspace{1cm} \hspace{1cm} (3.10)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \cdot C \cdot n \hspace{1cm} (2.6)\]
-                    \[= C(b - a) \hspace{1cm} (2.13)\]
+                    Integral of a constant (id \IntegralConstant) (+)
+                    \[\int^b_a dx \cdot C = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} C \hspace{1cm} \hspace{1cm} (\DefinitionIntegral)\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \cdot C \cdot n \hspace{1cm} (\SummationConstant)\]
+                    \[= C(b - a) \hspace{1cm} (\MultiplicationDivisionSame)\]
 
                 \subsubsection{Arithmetic Operations}
-                    Integral of a addition and a subtraction of two functions (id 3.24) (+)
+                    Integral of a addition and a subtraction of two functions (id \IntegralAdditionTwoFunctions) (+)
                     \[\int^b_a f(x) \pm g(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[ \sum^n_{i=1} f\left(a + i \frac{b - a}{n}\right) \pm g\left(a + i \frac{b - a}{n} \right) \right] \hspace{1cm} (3.10)\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right] \hspace{1cm} (2.5)\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \hspace{1cm} (2.12)(3.3)\]
                     \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx \hspace{1cm} (3.10)\]
 
-                    Integral of a function elevate to 1 (id 3.25) (?)
+                    Integral of a function elevate to 1 (id \IntegralFunctionElevate) (?)
                     \[\int^b_a dx \cdot x = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} a + i \frac{b - a}{n} \hspace{1cm} (3.10)\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} a + \sum^n_{i=1} i \frac{b - a}{n}\right] \hspace{1cm} (2.5)\]
                     \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b - a}{n} \sum^n_{i=1} i \right] \hspace{1cm} (2.6)\]
@@ -462,7 +504,7 @@
                     \[= \frac{b^2 - a^2}{2}\]
 
                 \subsubsection{Relation with other functions}
-                    Integral of a summation (id 3.26) (?)
+                    Integral of a summation (id \IntegralSummation) (?)
                     \[\int^b_a dx \sum^n_{i=j} f(x, i) = \int^b_a dx [f(x, j) + f(x, j + 1) + \cdots + f(x, i - 1) + f(x, i)] \hspace{1cm} (2.1)\]
                     \[= \int^b_a dx f(x, j) + \int^b_a dx f(x, j + 1) + \cdots + \int^b_a f(x, i - 1) + \int^b_a f(x, i) \hspace{1cm} (3.24)\]
                     \[= \sum^n_{i=j} \int^b_a dx f(x, i) \hspace{1cm} (2.1)\]
