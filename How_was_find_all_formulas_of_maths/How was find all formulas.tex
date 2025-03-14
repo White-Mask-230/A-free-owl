@@ -83,8 +83,7 @@
 \NewId{IntegralMultiplyFunctionConstant}{3} %22
 \NewId{IntegralConstant}{3} %23
 \NewId{IntegralAdditionTwoFunctions}{3} % 24
-\NewId{IntegralFunctionElevate}{3} %25
-\NewId{IntegralSummation}{3} %26
+\NewId{IntegralSummation}{3} %25
 
 \begin{document}
     % Create front page
@@ -97,6 +96,8 @@
         \node at ([yshift=-7cm, xshift=0cm]current page.north) {\Huge \textbf{How was find all formulas of maths}};
         \node at ([yshift=-11cm, xshift=0cm]current page.north) {\Huge \textbf{This book belong to:}};
         \node at ([yshift=-13cm, xshift=0cm]current page.north) {\Huge \textbf{A free owl project}};
+
+        \node at (7,-15) {\includegraphics[width=8cm, height=8cm]{logo.png}};
     \end{tikzpicture}
 
     \newpage
@@ -296,10 +297,6 @@
                 \[= \frac{a \cdot \frac{1}{c}}{b} \hspace{1cm} (\MultiplicationDivisionSame)\]
                 \[= \frac{a}{b} \cdot \frac{1}{c} \hspace{1cm} (\MultiplyFraction)\]
 
-                Divide a with a (id \DivideAWithA) (*)
-                \[\frac{a}{a} = a \cdot \frac{1}{a} \hspace{1cm} (\MultiplyFraction)\]
-                \[= 1 \hspace{1cm} (\MultiplicationDivisionSame)\]
-
             \subsection{Property of multiplications}
                 Definition of multiplication (id \DefinitionMultiplication) (*)\\
                 
@@ -484,30 +481,16 @@
 
                 \subsubsection{Arithmetic Operations}
                     Integral of a addition and a subtraction of two functions (id \IntegralAdditionTwoFunctions) (+)
-                    \[\int^b_a f(x) \pm g(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[ \sum^n_{i=1} f\left(a + i \frac{b - a}{n}\right) \pm g\left(a + i \frac{b - a}{n} \right) \right] \hspace{1cm} (3.10)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right] \hspace{1cm} (2.5)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \hspace{1cm} (2.12)(3.3)\]
-                    \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx \hspace{1cm} (3.10)\]
-
-                    Integral of a function elevate to 1 (id \IntegralFunctionElevate) (?)
-                    \[\int^b_a dx \cdot x = \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} a + i \frac{b - a}{n} \hspace{1cm} (3.10)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} a + \sum^n_{i=1} i \frac{b - a}{n}\right] \hspace{1cm} (2.5)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b - a}{n} \sum^n_{i=1} i \right] \hspace{1cm} (2.6)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b - a}{n} \cdot n \cdot \frac{n + 1}{2}\right] \hspace{1cm} (?)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{(b - a)(n + 1)}{2}\right] \hspace{1cm} (2.13)\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{b \cdot n + b - a \cdot n - a}{2}\right]\]
-                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[a \cdot n + \frac{n (b - a) + b - a}{2}\right] \hspace{1cm} (2.12)\]
-                    \[= \lim_{n \rightarrow \infty} a(b - a) + \frac{(b - a)^2}{2} + \frac{b - a}{2 n} \hspace{1cm} (2.12)\]
-                    \[= a(b - a) + \frac{(b - a)^2}{2} \hspace{1cm} (?)\]
-                    \[= \frac{2a(b - a) + (b - a)^2}{2}\]
-                    \[= \frac{2 \cdot a \cdot b - 2a^2 + b^2 - 2 \cdot b \cdot a + a^2}{2} \hspace{1cm} (2.12) (2.8)\]
-                    \[= \frac{b^2 - a^2}{2}\]
+                    \[\int^b_a f(x) \pm g(x) dx = \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[ \sum^n_{i=1} f\left(a + i \frac{b - a}{n}\right) \pm g\left(a + i \frac{b - a}{n} \right) \right] \hspace{1cm} (\DefinitionIntegral)\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \left[\sum^n_{i=1} f\left(a + i \frac{b - a}{n} \right) \pm \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \right] \hspace{1cm} (\SummationAdditionFunctions)\]
+                    \[= \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i = 1} f\left(a + i \frac{b - a}{n}\right) \pm \lim_{n \rightarrow \infty} \frac{b - a}{n} \sum^n_{i=1} g\left(a + i \frac{b - a}{n}\right) \hspace{1cm} (\DistributiveProperty)(\LimitSummationFunctions)\]
+                    \[= \int^b_a f(x) dx \pm \int^b_a g(x) dx \hspace{1cm} (\DefinitionIntegral)\]
 
                 \subsubsection{Relation with other functions}
-                    Integral of a summation (id \IntegralSummation) (?)
-                    \[\int^b_a dx \sum^n_{i=j} f(x, i) = \int^b_a dx [f(x, j) + f(x, j + 1) + \cdots + f(x, i - 1) + f(x, i)] \hspace{1cm} (2.1)\]
-                    \[= \int^b_a dx f(x, j) + \int^b_a dx f(x, j + 1) + \cdots + \int^b_a f(x, i - 1) + \int^b_a f(x, i) \hspace{1cm} (3.24)\]
-                    \[= \sum^n_{i=j} \int^b_a dx f(x, i) \hspace{1cm} (2.1)\]
+                    Integral of a summation (id \IntegralSummation) (*)
+                    \[\int^b_a dx \sum^n_{i=j} f(x, i) = \int^b_a dx [f(x, j) + f(x, j + 1) + \cdots + f(x, i - 1) + f(x, i)] \hspace{1cm} (\DefinitionSummation)\]
+                    \[= \int^b_a dx f(x, j) + \int^b_a dx f(x, j + 1) + \cdots + \int^b_a f(x, i - 1) + \int^b_a f(x, i) \hspace{1cm} (\IntegralAdditionTwoFunctions)\]
+                    \[= \sum^n_{i=j} \int^b_a dx f(x, i) \hspace{1cm} (\DefinitionSummation)\]
 
         \chapter{Final part}
             \section{Reference}
