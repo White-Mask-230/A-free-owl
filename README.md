@@ -41,13 +41,13 @@ Development branch: https://github.com/White-Mask-230/A-free-owl/tree/developmen
 # TODO Zone
 ## How Was Find All Formulas of Maths
 Prove the formulas of the photos
-![Derivatives](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/derivatives.jpg)
-![Especific integral](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/especific-int.jpg)
-![General Integrals](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/general-integrals.jpg)
-![Limits Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/limits-propertys.jpg)
-![Logarithm Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/logarithm-propertys.jpg)
-![Propertys Infinity](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/propertys-infinity.jpg)
-![Trigonometric Propertys](https://github.com/White-Mask-230/A-free-owl/blob/development-all-formulas-maths/photos/trigonmetric-propertys.jpg)
+![Derivatives](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/derivatives.jpg)
+![Especific integral](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/especific-int.jpg)
+![General Integrals](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/general-integrals.jpg)
+![Limits Propertys](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/limits-propertys.jpg)
+![Logarithm Propertys](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/logarithm-propertys.jpg)
+![Propertys Infinity](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/propertys-infinity.jpg)
+![Trigonometric Propertys](https://github.com/White-Mask-230/A-free-owl/blob/main/photos/trigonmetric-propertys.jpg)
 
 # Wiki
 * [Receive help](https://github.com/White-Mask-230/A-free-owl/wiki/Receive-help)
