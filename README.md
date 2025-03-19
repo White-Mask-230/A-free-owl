@@ -26,10 +26,10 @@ Developing
 The goal of the book is to demonstrate all maths formulas. Is in development.
 
 Read it:
-1. https://figshare.com/articles/journal_contribution/How_was_find_all_formulas_of_maths/26339590?file=53007587
-2. https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How was find all formulas.pdf
+1. [Figshare pdf](https://figshare.com/articles/journal_contribution/How_was_find_all_formulas_of_maths/26339590?file=53007587)
+2. [Github pdf](https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How_was_find_all_formulas.pdf)
 
-Source: https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How was find all formulas.tex
+Source: https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How_was_find_all_formulas.tex
 
 Development branch: https://github.com/White-Mask-230/A-free-owl/tree/development-all-formulas-maths
 
