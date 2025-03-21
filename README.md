@@ -9,14 +9,14 @@ Read it:
 Source: https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How_was_find_all_formulas.tex
 
 ## Owl Finder
-The goal of the project is to make a form to browse the project in a easy why. Is development the first version.
+The goal of the project is to make a form to browse the project in a easy why. Is in development the first version.
 
 # Frequently Asked Questions
 ## Why a owl?
 The owl is because in the Greek mythology, the owl usualy represent the goddess of wisdom call Athena
 
 ## Who is it for?
-This project has been for all the people like me that want to know has made the things that we use daily
+This project is for all the people like me that want to know how was made the things that we use daily
 
 ## Differentiation with other projects?
 * This project is Open Source, to protect the books of this project of malicious changes the people that want to collaborate, they have to create a pull request that is like a proposal of a modification that have to be accept you can send it by email lucasvarelacorrea@gmail.com or using github https://github.com/White-Mask-230/A-free-owl
