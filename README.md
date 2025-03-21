@@ -8,12 +8,8 @@ Read it:
 
 Source: https://github.com/White-Mask-230/A-free-owl/blob/main/How_was_find_all_formulas_of_maths/How_was_find_all_formulas.tex
 
-Development branch: https://github.com/White-Mask-230/A-free-owl/tree/development-all-formulas-maths
-
 ## Owl Finder
 The goal of the project is to make a form to browse the project in a easy why. Is development the first version.
-
-Development branch: https://github.com/White-Mask-230/A-free-owl/tree/development-owl-finder
 
 # Frequently Asked Questions
 ## Why a owl?
